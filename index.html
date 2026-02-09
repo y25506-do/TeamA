@@ -67,13 +67,15 @@
         let start = document.querySelector(".start");
         start.addEventListener("click",function(){
             let count = 0;
-            setInterval(function () {
+            let timer = setInterval(function () {
                 count++;
                 document.getElementById("timerResult").textContent = `タイマー: ${count}秒経過`;
-                if (count === 5) {
+                if (count == 5) {
                     document.getElementById("timerResult").textContent += " - タイマー終了";
+                    clearInterval(timer);
                 }
             }, 1000);
+            
         })
 
         // バグ4: カウントアップ
