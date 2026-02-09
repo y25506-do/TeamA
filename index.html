@@ -70,7 +70,7 @@
             setInterval(function () {
                 count++;
                 document.getElementById("timerResult").textContent = `タイマー: ${count}秒経過`;
-                if (count === 5) {
+                if (count == 5) {
                     document.getElementById("timerResult").textContent += " - タイマー終了";
                 }
             }, 1000);
