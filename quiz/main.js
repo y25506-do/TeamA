@@ -54,3 +54,38 @@ function showquiz() {
     });
     resetTimer();
 }
+
+// 正誤判定
+function checkAnswer(selected, correct){
+    clearInterval(timer);
+
+    if(selected === correct){
+        score++;
+        console.log("正解！");
+    } else {
+        console.log("不正解...");
+    }
+
+    // 次の問題へ
+    count++;
+    showquiz();
+}
+
+// タイマー機能
+function resetTimer() {
+    clearInterval(timer);
+    timeLeft = 20;
+    document.getElementById('timer').textContent = timeLeft;
+
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('timer').textContent = timeLeft;
+
+        if(timeLeft <= 0) {
+            clearInterval(timer);
+            // 時間切れは不正解扱いとして次へ
+            count++;
+            showquiz;
+        }
+    },1000);
+}
