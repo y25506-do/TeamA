@@ -1,3 +1,59 @@
+/*担当：　長谷川舞佳　安保優真*/
+.quiz-page {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+#quiz {
+    width: 50%;
+    height: 60%;
+    border: 2px solid black;
+    background-color: #ffffff;
+   
+    display: flex;
+    font-size: 20px;
+  }
+
+  .button-area {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; 
+  }
+
+  #button1{
+    font-size: 200%;
+  }
+  #button2{
+    font-size: 200%;
+  }
+  #button3{
+    font-size: 200%;
+  }
+  
+  .result-page {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+#result {
+    width: 50%;
+    height: 60%;
+    border: 2px solid black;
+    background-color: #ffffff;
+   
+    display: flex;
+    font-size: 20px;
+  }
+
+  
 /*画面全体中央配置*/
 body{
     margin: 0;
