@@ -32,5 +32,25 @@ function showquiz() {
         finishgame();
         return;
     }
-    
+    const current = quiz[count];
+
+    // html要素への反映
+    document.getElementById('question').textContent = current.question;
+    document.getElementById('current-count').textContent = count + 1;
+    document.getElementById('hint-text').textContent = current.hint;
+    document.getElementById('hint-text').classList.add('hidden');
+
+    // 選択肢ボタンの生成
+    const choicesDiv = document.getElementById('choices-area');
+    choicesDiv.innerHTML = '';
+
+    current.choices.forEach(choice => {
+        const btn = document.createElement('button');
+        btn.textContent = choice;
+        btn.className = 'choice-btn';
+        // クリック時に正誤判定の関数を呼ぶ
+        btn.onclick = () => checkAnswer(choice,current.answer);
+        choicesDiv.appendChild(btn);
+    });
+    resetTimer();
 }
