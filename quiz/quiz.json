@@ -1,7 +1,21 @@
 {
     "1":
     {
-
-    }
+        "number": "第１問",
+        "explanation": "現時点（2026年2月16日）でNintendo Switchのソフトの種類は何本あるか？",
+        "hint": "",
+        "option1": "3680",
+        "option2": "4480",
+        "option3": "4880"
+    },
+    "2":
+    {
+        "number": "第２問",
+        "explanation": "Nintendo Switchの発売日は？",
+        "hint": "",
+        "option1": "2017年3月3日",
+        "option2": "2017年3月2日",
+        "option3": "2017年3月4日"
+    },
 }
 /*担当：　近藤聖矢*/
