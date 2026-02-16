@@ -12,6 +12,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url("");
+    background-size: cover;
+    background-repeat: no-repeat;
+            background-attachment: fixed;
   }
 
 #quiz {
@@ -28,16 +32,6 @@
     margin-top: 20px;
     display: flex;
     gap: 10px; 
-  }
-
-  #button1{
-    font-size: 200%;
-  }
-  #button2{
-    font-size: 200%;
-  }
-  #button3{
-    font-size: 200%;
   }
   
   
@@ -70,4 +64,77 @@ body{
     font-family: 'x10y12pxDonguriDuel', Courier, monospace;
 }
 
+
+#button1 {
+  font-size: 200%;
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 0 #840303, 0 8px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+  
+  &:hover {
+    background: #ff0000;
+  }
+  
+  &:active {
+    top: 4px;
+    box-shadow: 0 2px 0 #ab0000, 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+#button2 {
+  font-size: 200%;
+  background: #0051ff;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 0 #002472, 0 8px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+  
+  &:hover {
+    background: #0051ff;
+  }
+  
+  &:active {
+    top: 4px;
+    box-shadow: 0 2px 0 #0051ff, 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+#button3 {
+  font-size: 200%;
+  background: #15ff00;
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 0 #13a500, 0 8px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
+  position: relative;
+  top: 0;
+  
+  &:hover {
+    background: #15ff00;
+  }
+  
+  &:active {
+    top: 4px;
+    box-shadow: 0 2px 0 #15ff00, 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+}
 /*担当：　長谷川舞佳　安保優真*/ /*後で名前を消すこと*/
