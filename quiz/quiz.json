@@ -4,72 +4,72 @@
         "number": "第１問",
         "explanation": "現時点（2026年2月16日）でNintendo Switchのソフトは何本あるか？",
         "hint": "発売から約９年のソフトの数だよ。",
-        "option1": "3680本",
-        "option2": "4480本",
-        "option3": "4880本"
+        "button1": "3680本",
+        "button2": "4480本",
+        "button3": "4880本"
     },
     "2":
     {
         "number": "第２問",
         "explanation": "Nintendo Switchの発売日は？",
         "hint": "週末前に発売されたよ。",
-        "option1": "2017年3月3日",
-        "option2": "2017年3月2日",
-        "option3": "2017年3月4日"
+        "button1": "2017年3月3日",
+        "button2": "2017年3月2日",
+        "button3": "2017年3月4日"
     },
     "3":
     {
         "number": "第３問",
         "explanation": "Nintendo Switchが出せる最大fpsは？",
         "hint": "fpsゲームやっている人は分かるよね？",
-        "option1": "30fps",
-        "option2": "60fps",
-        "option3": "120fps"
+        "button1": "30fps",
+        "button2": "60fps",
+        "button3": "120fps"
     },
     "4":
     {
         "number": "第４問",
         "explanation": "スプラトゥーン３が発売された日は？",
         "hint": "スプラ２からスプラ３やっている人なら知ってるよね？",
-        "option1": "2022年9月5日",
-        "option2": "2022年9月9日",
-        "option3": "2022年9月13日"
+        "button1": "2022年9月5日",
+        "button2": "2022年9月9日",
+        "button3": "2022年9月13日"
     },
     "5":
     {
         "number": "第５問",
         "explanation": "２０２６年２月時点で一番人気なゲームは？",
         "hint": "みんなで楽しく遊べるゲームだね。",
-        "option1": "あつまれ　どうぶつの森",
-        "option2": "大乱闘スマッシュブラザーズ SPECIAL",
-        "option3": "マリオカート８ デラックス"
+        "button1": "あつまれ　どうぶつの森",
+        "button2": "大乱闘スマッシュブラザーズ SPECIAL",
+        "button3": "マリオカート８ デラックス"
     },
     "6":
     {
         "number": "第６問",
         "explanation": "Nintendo Switchの画面サイズは？",
         "hint": "有機ELではないよ？でもこじんまりとしたサイズだよね。",
-        "option1": "5インチ",
-        "option2": "6.2インチ",
-        "option3": "7.1インチ"
+        "button1": "5インチ",
+        "button2": "6.2インチ",
+        "button3": "7.1インチ"
     },
     "7":
     {
         "number": "第７問",
         "explanation": "Nintendo Switchの有機ELモデルは、通常モデルと比べて画面サイズが何インチ大きくなった？",
         "hint": "使ったことはあるかな？だいぶ大きく見えるよ。",
-        "option1": "0.5インチ",
-        "option2": "0.8インチ",
-        "option3": "1.0インチ"
+        "button1": "0.5インチ",
+        "button2": "0.8インチ",
+        "button3": "1.0インチ"
     },
     "8":
     {
         "number": "第８問",
         "explanation": "Nintendo Switchで、長押しすると電源メニュー（スリープ・電源OFF）が出るボタンは？",
         "hint": "１年も使ったら知っている機能だよね。",
-        "option1": "ホームボタン",
-        "option2": "＋ボタン",
-        "option3": "電源ボタン（本体上部）"
+        "button1": "ホームボタン",
+        "button2": "＋ボタン",
+        "button3": "電源ボタン（本体上部）"
     },
     
 }
