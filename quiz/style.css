@@ -131,4 +131,10 @@ body{
     box-shadow: 0 2px 0 #15ff00, 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 }
+
+.home-btn {
+  position: fixed;   
+  bottom: 20px;      
+  right: 20px;       
+}
 /*担当：　長谷川舞佳　安保優真*/ /*後で名前を消すこと*/
