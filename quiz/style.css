@@ -1,1 +1,28 @@
+/*画面全体中央配置*/
+body{
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+}
+
+/*文字中央*/
+.container{
+    display: flex;
+    flex-direction: column; /*縦並び*/
+    align-items: center;    /*横中央*/
+    gap: 20px;              /*文字とボタンの感覚*/
+}
+
+/*ボタンデザイン*/
+.start-btn{
+    padding: 12px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 /*担当：　長谷川舞佳　安保優真*/ /*後で名前を消すこと*/
