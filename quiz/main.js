@@ -42,13 +42,13 @@ function showquiz() {
     // 問題文
     document.getElementById('explanation').textContent = current.question;
 
-    // ヒント (初期状態は「ヒントを見る」にしておく)
-    const hintElement = document.getElementById('hint');
-    hintElement.textContent = 'ヒントを見る(クリック)';
-    // ヒントをクリックした時の動作
-    hintElement.onclick = function() {
-        hintElement.textContent = current.hint;
-    };
+    // // ヒント (初期状態は「ヒントを見る」にしておく)
+    // const hintElement = document.getElementById('hint');
+    // hintElement.textContent = 'ヒントを見る(クリック)';
+    // // ヒントをクリックした時の動作
+    // hintElement.onclick = function() {
+    //     hintElement.textContent = current.hint;
+    // };
 
     // --- 選択肢ボタンのセットアップ ---
     // HTMLにある button1, button2, button3 を使用する
