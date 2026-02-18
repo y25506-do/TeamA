@@ -4,6 +4,16 @@
     src: url("./fonts/x10y12pxDonguriDuel.ttf");
   }
 
+@font-face {
+    font-family: "x10y12pxDonguriDuel";
+    src: url("./fonts/仮.ttf");
+  }
+
+@font-face {
+    font-family: "x10y12pxDonguriDuel";
+    src: url("./fonts/x8y12pxTheStrongGamer.ttf");
+  }
+
 /*担当：　長谷川舞佳　安保優真*/
 .quiz-page {
     margin: 0;
