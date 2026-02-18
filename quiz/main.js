@@ -86,7 +86,7 @@ function checkAnswer(selected, answer) {
     }
 
     // 2. 解説を追加
-    message += "【解説】\n" + current.explanation;
+    message += "【解説】\n" + current.kaisetu;
 
     // 3. アラートを表示
     alert(message);
