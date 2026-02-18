@@ -44,11 +44,10 @@ function showquiz() {
     // JSONのキー名 "explanation" を使用
     document.getElementById('explanation').textContent = current.explanation;
     
-    // ヒントの表示（必要であればコメントアウトを外して使用）
-    // document.getElementById('hint').textContent = current.hint;
+    // ヒントの表示
+    document.getElementById('hint').textContent = current.hint;
 
-    // --- 選択肢ボタンのセットアップ ---
-    // JSONのキー名 "button1"～"button3" を配列化して扱う
+    // 選択肢ボタン
     const choices = [current.button1, current.button2, current.button3];
     
     const buttons = [
@@ -60,8 +59,6 @@ function showquiz() {
     buttons.forEach((btn, index) => {
         if (btn && choices[index]) {
             btn.textContent = choices[index];
-            // 以前のイベントリスナーを削除するためにクローン作成等の手法があるが、
-            // ここでは簡易的に onclick を上書きする
             btn.onclick = () => checkAnswer(choices[index], current.answer);
             btn.style.display = 'inline-block'; // ボタンを表示
         } else if (btn) {
@@ -72,15 +69,15 @@ function showquiz() {
     resetTimer();
 }
 
-function checkAnswer(selected, correct){
+function checkAnswer(selected, answer){
     clearInterval(timer);
 
     // correct（正解）がJSONに無いと判定できないので注意
-    if(selected === correct){
+    if(selected === answer){
         score++;
         console.log("正解！");
     } else {
-        console.log("不正解... 正解は: " + correct);
+        console.log("不正解... 正解は: " + answer);
     }
 
     count++;
