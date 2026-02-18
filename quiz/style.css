@@ -111,8 +111,12 @@ transform: scale(0.95);
 }
 
 /* 数字カウントダウン */
-#timer-label
-{
+#timer-label {
+  flex-shrink: 0;
+  width: 30px; /* 数字幅固定 */
+  text-align: right;
+  font-size: 25px;
+
   font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
 }
 
