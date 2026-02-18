@@ -69,17 +69,29 @@ function showquiz() {
     resetTimer();
 }
 
-function checkAnswer(selected, answer){
-    clearInterval(timer);
+function checkAnswer(selected, answer) {
+    clearInterval(timer); // タイマーを止める
 
-    // correct（正解）がJSONに無いと判定できないので注意
-    if(selected === answer){
+    // 現在の問題のデータを取得（解説を表示するため）
+    const current = quiz[count];
+    let message = "";
+
+    // 1. 正誤判定とメッセージの作成
+    if (selected === answer) {
         score++;
-        console.log("正解！");
+        message = "✨ 正解です！\n\n";
     } else {
-        console.log("不正解... 正解は: " + answer);
+        message = "❌ 残念、不正解...\n";
+        message += "正解は: " + answer + "\n\n";
     }
 
+    // 2. 解説を追加
+    message += "【解説】\n" + current.explanation;
+
+    // 3. アラートを表示
+    alert(message);
+
+    // 4. 次の問題へ
     count++;
     showquiz();
 }
