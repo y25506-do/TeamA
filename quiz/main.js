@@ -71,21 +71,38 @@ function checkAnswer(selected, correct){
     showquiz();
 }
 
-// タイマー機能
 function resetTimer() {
     clearInterval(timer);
     timeLeft = 20;
-    document.getElementById('timer').textContent = timeLeft;
+    
+    const timerLabel = document.getElementById('timer-label');
+    const timerBar = document.getElementById('timer-bar');
+
+    // 初期化
+    timerLabel.textContent = timeLeft;
+    timerBar.style.width = '100%';
+    timerBar.style.backgroundColor = '#2196F3'; // 青
 
     timer = setInterval(() => {
         timeLeft--;
-        document.getElementById('timer').textContent = timeLeft;
+        timerLabel.textContent = timeLeft;
+        timerBar.style.width = `${(timeLeft / 20) * 100}%`;
+
+        // 色変化：青→黄→赤
+        if(timeLeft > 10) {
+            timerBar.style.backgroundColor = '#2196F3'; // 青
+        } else if(timeLeft > 5) {
+            timerBar.style.backgroundColor = '#FFC107'; // 黄
+        } else {
+            timerBar.style.backgroundColor = '#F44336'; // 赤
+        }
 
         if(timeLeft <= 0) {
             clearInterval(timer);
-            // 時間切れは不正解扱いとして次へ
+            timerLabel.textContent = 0;
             count++;
-            showquiz;
+            showquiz();
         }
-    },1000);
+    }, 1000);
 }
+
