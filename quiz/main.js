@@ -115,8 +115,8 @@ function resetTimer() {
 
         // 色変化：青→黄→赤
         if(timeLeft > 10) {
-            timerBar.style.backgroundColor = '#2196F3'; // 青
-        } else if(timeLeft > 5) {
+            timerBar.style.backgroundColor = '#7acf0a'; // 青
+        } else if(timeLeft > 4) {
             timerBar.style.backgroundColor = '#FFC107'; // 黄
         } else {
             timerBar.style.backgroundColor = '#F44336'; // 赤
