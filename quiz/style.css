@@ -66,6 +66,12 @@ body{
     align-items: center;
 
     font-family: sans-serif;
+
+    /*背景追加*/
+    background-image: url("./images/bg.png");
+    background-size: cover; /*全体に広げる*/
+    background-position: center; /*中央に*/
+    background-repeat: no-repeat; /*繰り返さない*/
 }
 
 /*文字中央*/
