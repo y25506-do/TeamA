@@ -99,6 +99,10 @@ function checkAnswer(selected, answer) {
 function resetTimer() {
     clearInterval(timer);
     timeLeft = 20;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 2df547728d8e94c78879873912e201bcf21b6c8c
       // タイマー表示用の要素があれば更新 (例: document.getElementById('timer').textContent = timeLeft;)
     const timerLabel = document.getElementById('timer-label');
     const timerBar = document.getElementById('timer-bar');
@@ -125,8 +129,6 @@ function resetTimer() {
         if(timeLeft <= 0) {
             clearInterval(timer);
             timerLabel.textContent = 0;
-<<<<<<< bug16
-=======
             console.log("時間切れ");
 >>>>>>> main
             count++;
@@ -135,8 +137,6 @@ function resetTimer() {
     }, 1000);
 }
 
-<<<<<<< bug16
-=======
 
 function finishgame(){
     clearInterval(timer);
