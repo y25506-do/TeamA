@@ -1,72 +1,97 @@
-let allquiz = [];  // JSONから読み込んだ全データ
-let quiz = [];   // 出題する10問
-let count = 0;  // 今何問目か
-let score = 0;  // 正解数
-let timer;  // タイマーの入れ物
-let timeLeft = 20  // 残り時間
+let allquiz = [];
+let quiz = [];
+let count = 0;
+let score = 0;
+let timer;
+let timeLeft = 20;
 
-// Jsonのデータを読み込み
 fetch('quiz.json')
     .then(response => response.json())
     .then(data => {
-        allquiz = data;
-        game();  // データの読み込みが終わったらゲーム開始
+        // もしJSONがオブジェクト形式（元のデータのまま）だった場合、配列に変換する処理
+        if (!Array.isArray(data)) {
+            allquiz = Object.values(data);
+        } else {
+            allquiz = data;
+        }
+        game();
     })
     .catch(error => {
         console.error('Error:', error);
-        document.getElementById('question').textContent = 'データの読み込みに失敗しました。';
+        document.getElementById('explanation').textContent = 'データの読み込みに失敗しました。';
     });
 
-// ゲームの初期化
 function game() {
-    // シャッフルして１０問取得してquizに入れる
-    quiz = allquiz.sort(() => Math.random( ) - 0.5).slice(0, 10);
+    // データが空でないか確認
+    if(allquiz.length === 0) return;
+    
+    // シャッフルして最大10問（データが足りない場合はあるだけ）取得
+    quiz = allquiz.sort(() => Math.random() - 0.5).slice(0, 10);
     count = 0;
     score = 0;
     showquiz();
 }
 
-// 問題表示
 function showquiz() {
-    if(count >= 10) {
+    if(count >= quiz.length) { // 10問または全問終わったら終了
         finishgame();
         return;
     }
     const current = quiz[count];
 
-    // html要素への反映
-    document.getElementById('question').textContent = current.question;
-    document.getElementById('current-count').textContent = count + 1;
-    document.getElementById('hint-text').textContent = current.hint;
-    document.getElementById('hint-text').classList.add('hidden');
+    document.getElementById('number').textContent = '問題 ' + (count + 1);
+    
+    // JSONのキー名 "explanation" を使用
+    document.getElementById('explanation').textContent = current.explanation;
+    
+    // ヒントの表示
+    document.getElementById('hint').textContent = current.hint;
 
-    // 選択肢ボタンの生成
-    const choicesDiv = document.getElementById('choices-area');
-    choicesDiv.innerHTML = '';
+    // 選択肢ボタン
+    const choices = [current.button1, current.button2, current.button3];
+    
+    const buttons = [
+        document.getElementById('button1'),
+        document.getElementById('button2'),
+        document.getElementById('button3')
+    ];
 
-    current.choices.forEach(choice => {
-        const btn = document.createElement('button');
-        btn.textContent = choice;
-        btn.className = 'choice-btn';
-        // クリック時に正誤判定の関数を呼ぶ
-        btn.onclick = () => checkAnswer(choice,current.answer);
-        choicesDiv.appendChild(btn);
+    buttons.forEach((btn, index) => {
+        if (btn && choices[index]) {
+            btn.textContent = choices[index];
+            btn.onclick = () => checkAnswer(choices[index], current.answer);
+            btn.style.display = 'inline-block'; // ボタンを表示
+        } else if (btn) {
+            btn.style.display = 'none'; // 選択肢がないボタンは隠す
+        }
     });
+
     resetTimer();
 }
 
-// 正誤判定
-function checkAnswer(selected, correct){
-    clearInterval(timer);
+function checkAnswer(selected, answer) {
+    clearInterval(timer); // タイマーを止める
 
-    if(selected === correct){
+    // 現在の問題のデータを取得（解説を表示するため）
+    const current = quiz[count];
+    let message = "";
+
+    // 1. 正誤判定とメッセージの作成
+    if (selected === answer) {
         score++;
-        console.log("正解！");
+        message = "✨ 正解です！\n\n";
     } else {
-        console.log("不正解...");
+        message = "❌ 残念、不正解...\n";
+        message += "正解は: " + answer + "\n\n";
     }
 
-    // 次の問題へ
+    // 2. 解説を追加
+    message += "【解説】\n" + current.explanation;
+
+    // 3. アラートを表示
+    alert(message);
+
+    // 4. 次の問題へ
     count++;
     showquiz();
 }
@@ -74,7 +99,11 @@ function checkAnswer(selected, correct){
 function resetTimer() {
     clearInterval(timer);
     timeLeft = 20;
+<<<<<<< bug16
     
+=======
+      // タイマー表示用の要素があれば更新 (例: document.getElementById('timer').textContent = timeLeft;)
+>>>>>>> main
     const timerLabel = document.getElementById('timer-label');
     const timerBar = document.getElementById('timer-bar');
 
@@ -100,9 +129,23 @@ function resetTimer() {
         if(timeLeft <= 0) {
             clearInterval(timer);
             timerLabel.textContent = 0;
+<<<<<<< bug16
+=======
+            console.log("時間切れ");
+>>>>>>> main
             count++;
             showquiz();
         }
     }, 1000);
 }
 
+<<<<<<< bug16
+=======
+
+function finishgame(){
+    clearInterval(timer);
+    setTimeout(() => {
+        alert('終了！\nあなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！');
+    }, 100);
+}
+>>>>>>> main
