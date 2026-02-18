@@ -40,7 +40,7 @@ function showquiz() {
     document.getElementById('number').textContent = '問題 ' + (count + 1);
     
     // 問題文
-    document.getElementById('explanation').textContent = current.question;
+    document.getElementById('explanation').textContent = current.explanation;
 
     // // ヒント (初期状態は「ヒントを見る」にしておく)
     // const hintElement = document.getElementById('hint');
@@ -52,6 +52,7 @@ function showquiz() {
 
     // --- 選択肢ボタンのセットアップ ---
     // HTMLにある button1, button2, button3 を使用する
+    const choice = [current.button1, current.button2, current.button3]
     const buttons = [
         document.getElementById('button1'),
         document.getElementById('button2'),
