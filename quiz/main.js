@@ -130,7 +130,6 @@ function resetTimer() {
             clearInterval(timer);
             timerLabel.textContent = 0;
             console.log("時間切れ");
->>>>>>> main
             count++;
             showquiz();
         }
@@ -144,4 +143,3 @@ function finishgame(){
         alert('終了！\nあなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！');
     }, 100);
 }
->>>>>>> main
