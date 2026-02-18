@@ -7,15 +7,30 @@
     <title>クイズ</title>
 </head>
 <body class="quiz-page">
-    <div id="quiz">
 
+    <div id="timer-container">
+        <span id="timer-text">残り時間</span>
+        <span id="timer-label">20</span>
+        <div id="timer-bar-container">
+            <div id="timer-bar"></div>
+        </div>
     </div>
-
+    
+    <div id="quiz">
+        <p id="number">問題1</p>
+        <h1 id="explanation">問題文表示</h3>
+        <p id="hint">ヒント</p>
+    </div>
+    
         <div class="button-area">
             <button type="button" id="button1">1</button>
             <button type="button" id="button2">2</button>
             <button type="button" id="button3">3</button>
         </div>
+        
+        <button class="home-btn" onclick="location.href='index.html'">
+            ホームに戻る
+        </button>
 
    <script src="main.js"></script>
 
