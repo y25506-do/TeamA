@@ -17,9 +17,52 @@
             background-attachment: fixed;
   }
 
+/* タイマー全体 */
+#timer-container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: 'x10y12pxDonguriDuel', monospace;
+  color: white;
+}
+
+/* 残り時間の文字 */
+#timer-text {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+/* 数字カウントダウン */
+#timer-label {
+  flex-shrink: 0;
+  width: 30px; /* 数字幅固定 */
+  text-align: right;
+  font-size: 16px;
+}
+
+/* バー外枠 */
+#timer-bar-container {
+  flex-grow: 1;
+  height: 10px;            /* 高さを短く */
+  background-color: #333;  /* 暗い灰色の背景 */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* バー本体 */
+#timer-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #2196F3; /* 初期は青 */
+  border-radius: 5px 0 0 5px;
+  transition: width 1s linear, background-color 1s linear;
+}
+
   #quiz { 
     width: 70%;
-    height: 65vh;
+    height: 65%;
     border-radius: 20px; 
     background-color: #ffffff;
     display: flex;
