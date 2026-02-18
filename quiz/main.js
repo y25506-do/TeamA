@@ -69,17 +69,29 @@ function showquiz() {
     resetTimer();
 }
 
-function checkAnswer(selected, answer){
-    clearInterval(timer);
+function checkAnswer(selected, answer) {
+    clearInterval(timer); // タイマーを止める
 
-    // correct（正解）がJSONに無いと判定できないので注意
-    if(selected === answer){
+    // 現在の問題のデータを取得（解説を表示するため）
+    const current = quiz[count];
+    let message = "";
+
+    // 1. 正誤判定とメッセージの作成
+    if (selected === answer) {
         score++;
-        console.log("正解！");
+        message = "✨ 正解です！\n\n";
     } else {
-        console.log("不正解... 正解は: " + answer);
+        message = "❌ 残念、不正解...\n";
+        message += "正解は: " + answer + "\n\n";
     }
 
+    // 2. 解説を追加
+    message += "【解説】\n" + current.kaisetu;
+
+    // 3. アラートを表示
+    alert(message);
+
+    // 4. 次の問題へ
     count++;
     showquiz();
 }
@@ -87,18 +99,39 @@ function checkAnswer(selected, answer){
 function resetTimer() {
     clearInterval(timer);
     timeLeft = 20;
-    // タイマー表示用の要素があれば更新 (例: document.getElementById('timer').textContent = timeLeft;)
-    
+      // タイマー表示用の要素があれば更新 (例: document.getElementById('timer').textContent = timeLeft;)
+    const timerLabel = document.getElementById('timer-label');
+    const timerBar = document.getElementById('timer-bar');
+
+    // 初期化
+    timerLabel.textContent = timeLeft;
+    timerBar.style.width = '100%';
+    timerBar.style.backgroundColor = '#2196F3'; // 青
+
     timer = setInterval(() => {
         timeLeft--;
+        timerLabel.textContent = timeLeft;
+        timerBar.style.width = `${(timeLeft / 20) * 100}%`;
+
+        // 色変化：青→黄→赤
+        if(timeLeft > 10) {
+            timerBar.style.backgroundColor = '#7acf0a'; // 青
+        } else if(timeLeft > 4) {
+            timerBar.style.backgroundColor = '#FFC107'; // 黄
+        } else {
+            timerBar.style.backgroundColor = '#F44336'; // 赤
+        }
+
         if(timeLeft <= 0) {
             clearInterval(timer);
+            timerLabel.textContent = 0;
             console.log("時間切れ");
             count++;
             showquiz();
         }
     }, 1000);
 }
+
 
 function finishgame(){
     clearInterval(timer);
