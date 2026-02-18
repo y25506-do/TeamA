@@ -113,7 +113,7 @@ transform: scale(0.95);
 /* 数字カウントダウン */
 #timer-label
 {
-  font-family: "TheStrongGamer", monospace; /* ← 追加 */
+  font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
 }
 
 /*担当：　長谷川舞佳　安保優真*/ /*後で名前を消すこと*/
