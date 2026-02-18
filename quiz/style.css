@@ -70,10 +70,34 @@ body{
 
 /*ボタンデザイン*/
 .start-btn{
-    padding: 12px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    font-family: 'x10y12pxDonguriDuel', Courier, monospace;
+  width: 220px;
+  height: 80px;
+
+  font-size: 30px;
+  cursor: pointer;
+  font-family: 'x10y12pxDonguriDuel', Courier, monospace;
+  color: black; /*黒でも大丈夫?*/
+
+  border: none; /*枠消す*/
+  background: none; /*デフォルト色を消す*/
+
+  /*背景追加*/
+  background-image: url("./img/button.png");
+  background-size: contain; 
+  background-position: center; /*中央に*/
+  background-repeat: no-repeat; /*繰り返さない*/
+
+  transition: transform 0.1s; /*押した感じ*/
+}
+
+/*ホバー*/
+.start-btn:hover{
+transform: scale(1.05);
+}
+
+/*クリック*/
+.start-btn:active{
+transform: scale(0.95);
 }
 
 /*担当：　長谷川舞佳　安保優真*/ /*後で名前を消すこと*/
