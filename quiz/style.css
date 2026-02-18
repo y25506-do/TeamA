@@ -47,7 +47,6 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  font-family: 'x10y12pxDonguriDuel', monospace;
   color: white;
 }
 
@@ -55,6 +54,8 @@
 #timer-text {
   flex-shrink: 0;
   font-size: 20px;
+
+  font-family: 'PixelMplus12-Regular', monospace;
 }
 
 /* 数字カウントダウン */
@@ -64,7 +65,7 @@
   text-align: right;
   font-size: 25px;
     
-　font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
+  font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
 }
 
 /* バー外枠 */
