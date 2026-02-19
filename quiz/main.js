@@ -138,13 +138,16 @@ function finishgame(){
     setTimeout(() => {
         alert('終了！\nあなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！');
     }, 100);
-    localStorage.setItem("score",score);
-    localStorage.setItem("quiz.length",quiz.length);
-    location.href="result".html;
-    document.getElementById("comment1").textContent='あなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！' 
 }
 
 
-function resultpage(){
-    document.getElementById("message").textContent='あなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！' 
+window.onload = function() {
+    const comment = document.getElementById("comment1");
+
+    if(comment){
+        const score = localStorage.setItem("score",score);
+        const total = localStorage.setItem("total",quiz.length);
+
+        comment.textContent='あなたのスコアは ' + {score} + ' / ' + {total} + ' 問正解です！' 
+    }
 }
