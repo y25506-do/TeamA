@@ -14,7 +14,7 @@
     src: url("./fonts/x8y12pxTheStrongGamer.ttf");
   }
 
-/*担当：　長谷川舞佳　安保優真*/
+
 .quiz-page {
     margin: 0;
     height: 100vh;
@@ -88,7 +88,7 @@ font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
 
   #quiz { 
     width: 70%;
-    height: 65%;
+    height: 50%;
     border-radius: 20px; 
     background-color: #ffffff;
     display: flex;
@@ -191,7 +191,7 @@ transform: scale(0.95);
   color: white;
   border: none;
   padding: 14px 36px;
-  font-size: 16px;
+  font-size: 30px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
@@ -216,7 +216,7 @@ transform: scale(0.95);
   color: white;
   border: none;
   padding: 14px 36px;
-  font-size: 16px;
+  font-size: 30px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
@@ -241,7 +241,7 @@ transform: scale(0.95);
   color: white;
   border: none;
   padding: 14px 36px;
-  font-size: 16px;
+  font-size: 30px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
