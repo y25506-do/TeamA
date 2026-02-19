@@ -5,12 +5,12 @@
   }
 
 @font-face {
-    font-family: "x10y12pxDonguriDuel";
-    src: url("./fonts/仮.ttf");
+    font-family: "PixelMplus12-Regular";
+    src: url("./fonts/PixelMplus12-Regular.ttf");
   }
 
 @font-face {
-    font-family: "x10y12pxDonguriDuel";
+    font-family: "x8y12pxTheStrongGamer";
     src: url("./fonts/x8y12pxTheStrongGamer.ttf");
   }
 
@@ -47,7 +47,6 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  font-family: 'x10y12pxDonguriDuel', monospace;
   color: white;
 }
 
@@ -55,6 +54,8 @@
 #timer-text {
   flex-shrink: 0;
   font-size: 20px;
+
+  font-family: 'PixelMplus12-Regular', monospace;
 }
 
 /* 数字カウントダウン */
