@@ -141,7 +141,7 @@ function finishgame(){
     localStorage.setItem("score",score);
     localStorage.setItem("quiz.length",quiz.length);
     location.href="result".html;
-    document.getElementById("message").textContent='あなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！' 
+    document.getElementById("comment1").textContent='あなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！' 
 }
 
 
