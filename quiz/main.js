@@ -138,4 +138,13 @@ function finishgame(){
     setTimeout(() => {
         alert('終了！\nあなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！');
     }, 100);
+    localStorage.setItem("score",score);
+    localStorage.setItem("quiz.length",quiz.length);
+    location.href="result".html;
+    document.getElementById("message").textContent='あなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！' 
+}
+
+
+function resultpage(){
+    document.getElementById("message").textContent='あなたのスコアは ' + score + ' / ' + quiz.length + ' 問正解です！' 
 }
