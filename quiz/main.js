@@ -141,13 +141,3 @@ function finishgame(){
 }
 
 
-window.onload = function() {
-    const comment = document.getElementById("comment1");
-
-    if(comment){
-        const score = localStorage.setItem("score",score);
-        const total = localStorage.setItem("total",quiz.length);
-
-        comment.textContent='あなたのスコアは ' + {score} + ' / ' + {total} + ' 問正解です！' 
-    }
-}
