@@ -2,6 +2,7 @@ let allquiz = [];
 let quiz = [];
 let count = 0;
 let score = 0;
+let coin = 0;
 let timer;
 let timeLeft = 20;
 
@@ -22,6 +23,8 @@ fetch('quiz.json')
     });
 
 function game() {
+    //スタートした時だけ加算されるようにする
+    localStorage.removeItem("coinadded");
     // データが空でないか確認
     if(allquiz.length === 0) return;
     
