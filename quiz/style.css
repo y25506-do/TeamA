@@ -204,7 +204,15 @@ transform: scale(0.95);
 
   transition: transform 0.1s; /*押した感じ*/
 }
-
+/*ホバー*/
+.gacha-btn:hover{
+  transform: scale(1.05);
+  }
+  
+  /*クリック*/
+  .gacha-btn:active{
+  transform: scale(0.95);
+  }
 
 .zukan-btn{
   width: 220px;
