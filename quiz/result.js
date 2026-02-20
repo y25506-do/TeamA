@@ -1,5 +1,4 @@
 //結果画面用
-let score = Number(localStorage.getItem("score"));
 let coin = 0;
 //数値にする
 score = Number(localStorage.getItem("score"));
@@ -33,10 +32,15 @@ let totalCoin = Number(localStorage.getItem("totalcoin")) || 0;
 //加算していない場合
 if(!coinadded)
 {
-
     totalCoin+=coin;
     localStorage.setItem("totalcoin",totalCoin);
     //加算し終わったら
     localStorage.setItem("coinadded", "true");
 }
 document.getElementById("totalcoin").textContent = "獲得コイン： " + totalCoin;
+function resetcoin()
+{
+    localStorage.setItem("totalcoin", 0);
+    localStorage.removeItem("coinadded");
+    location.reload();
+}
