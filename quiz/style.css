@@ -406,7 +406,10 @@ transform: scale(0.95);
 
   z-index: 1000; /* 背景より前に出す */
 }
-
+.coins img {
+  width: 40px;          
+  height: auto;          
+}
 /* テキスト */
 #coin {
   font-size: 150%;
