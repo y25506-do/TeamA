@@ -2,7 +2,6 @@ let allquiz = [];
 let quiz = [];
 let count = 0;
 let score = 0;
-let coin = 0;
 let timer;
 let timeLeft = 20;
 
