@@ -5,16 +5,16 @@
   }
 
 @font-face {
-    font-family: "x10y12pxDonguriDuel";
-    src: url("./fonts/仮.ttf");
+    font-family: "PixelMplus12-Regular";
+    src: url("./fonts/PixelMplus12-Regular.ttf");
   }
 
 @font-face {
-    font-family: "x10y12pxDonguriDuel";
+    font-family: "x8y12pxTheStrongGamer";
     src: url("./fonts/x8y12pxTheStrongGamer.ttf");
   }
 
-/*担当：　長谷川舞佳　安保優真*/
+
 .quiz-page {
     margin: 0;
     height: 100vh;
@@ -47,7 +47,6 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
-  font-family: 'x10y12pxDonguriDuel', monospace;
   color: white;
 }
 
@@ -55,6 +54,8 @@
 #timer-text {
   flex-shrink: 0;
   font-size: 20px;
+
+  font-family: 'PixelMplus12-Regular', monospace;
 }
 
 /* 数字カウントダウン */
@@ -63,6 +64,8 @@
   width: 30px; /* 数字幅固定 */
   text-align: right;
   font-size: 25px;
+    
+font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
 }
 
 /* バー外枠 */
@@ -118,6 +121,38 @@
   text-align: right;
   font-size: 16px;
   opacity: 10;
+}
+
+/*確認用です*/
+.home-btn{
+  width: 130px;
+  height: 80px;
+
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'PixelMplus12-Regular', Courier, monospace;
+  color: black; /*黒でも大丈夫?*/
+
+  border: none; /*枠消す*/
+  background: none; /*デフォルト色を消す*/
+
+  /*背景追加*/
+  background-image: url("./img/button.png");
+  background-size: contain; 
+  background-position: center; /*中央に*/
+  background-repeat: no-repeat; /*繰り返さない*/
+
+  transition: transform 0.1s; /*押した感じ*/
+}
+
+/*ホバー*/
+.home-btn:hover{
+transform: scale(1.05);
+}
+
+/*クリック*/
+.home-btn:active{
+transform: scale(0.95);
 }
 
 
@@ -188,7 +223,7 @@ transform: scale(0.95);
   color: white;
   border: none;
   padding: 14px 36px;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
@@ -206,13 +241,14 @@ transform: scale(0.95);
     box-shadow: 0 2px 0 #ab0000, 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 }
+
 #button2 {
   font-size: 200%;
   background: #0051ff;
   color: white;
   border: none;
   padding: 14px 36px;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
@@ -230,13 +266,14 @@ transform: scale(0.95);
     box-shadow: 0 2px 0 #0051ff, 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 }
+
 #button3 {
   font-size: 200%;
   background: #15ff00;
   color: white;
   border: none;
   padding: 14px 36px;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
@@ -261,6 +298,28 @@ transform: scale(0.95);
   right: 20px;       
 }
 
+ /*確認用*/
+ .home-btn{
+  width: 130px;
+  height: 80px;
+
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'PixelMplus12-Regular', Courier, monospace;
+  color: black; /*黒でも大丈夫?*/
+
+  border: none; /*枠消す*/
+  background: none; /*デフォルト色を消す*/
+
+  /*背景追加*/
+  background-image: url("./images/button.png");
+  background-size: contain; 
+  background-position: center; /*中央に*/
+  background-repeat: no-repeat; /*繰り返さない*/
+
+  transition: transform 0.1s; /*押した感じ*/
+}
+
 #result { 
   width: 70%;
   height: 65%;
@@ -271,6 +330,7 @@ transform: scale(0.95);
 
   padding: 40px;
 }
+
 #score {
   flex: 1;                     
   display: flex;
@@ -278,4 +338,12 @@ transform: scale(0.95);
   justify-content: center;     
   font-size: 35px;
 }
+#coment {
+  flex: 1;                     
+  display: flex;
+  align-items: center;         
+  justify-content: center;     
+  font-size: 25px;
+}
+
 /*担当：　長谷川舞佳　安保優真*/ /*後で名前を消すこと*/
