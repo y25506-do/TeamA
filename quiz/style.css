@@ -88,7 +88,7 @@ font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
 
   #quiz { 
     width: 70%;
-    height: 65%;
+    height: 55%;
     border-radius: 20px; 
     background-color: #ffffff;
     display: flex;
@@ -121,6 +121,38 @@ font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
   text-align: right;
   font-size: 16px;
   opacity: 10;
+}
+
+/*確認用です*/
+.home-btn{
+  width: 130px;
+  height: 80px;
+
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'PixelMplus12-Regular', Courier, monospace;
+  color: black; /*黒でも大丈夫?*/
+
+  border: none; /*枠消す*/
+  background: none; /*デフォルト色を消す*/
+
+  /*背景追加*/
+  background-image: url("./img/button.png");
+  background-size: contain; 
+  background-position: center; /*中央に*/
+  background-repeat: no-repeat; /*繰り返さない*/
+
+  transition: transform 0.1s; /*押した感じ*/
+}
+
+/*ホバー*/
+.home-btn:hover{
+transform: scale(1.05);
+}
+
+/*クリック*/
+.home-btn:active{
+transform: scale(0.95);
 }
 
 
@@ -266,6 +298,17 @@ transform: scale(0.95);
   right: 20px;       
 }
 
+/*確認用*/
+.home-btn{
+  width: 130px;
+  height: 80px;
+
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'PixelMplus12-Regular', Courier, monospace;
+  color: black; /*黒でも大丈夫?*/
+}
+
 #result { 
   width: 70%;
   height: 65%;
@@ -277,19 +320,18 @@ transform: scale(0.95);
   padding: 40px;
 }
 
-#score {
+#comment1 {
   flex: 1;                     
   display: flex;
   align-items: center;         
   justify-content: center;     
   font-size: 35px;
 }
-#coment {
+
+#comment2 {
   flex: 1;                     
   display: flex;
   align-items: center;         
   justify-content: center;     
   font-size: 25px;
 }
-
-/*担当：　長谷川舞佳　安保優真*/ /*後で名前を消すこと*/
