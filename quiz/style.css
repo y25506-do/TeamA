@@ -411,7 +411,7 @@ transform: scale(0.95);
   height: auto;          
 }
 /* テキスト */
-#coin {
+#totalcoin {
   font-size: 150%;
   color: white;
   margin: 0;
