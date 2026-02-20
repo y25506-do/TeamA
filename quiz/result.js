@@ -1,7 +1,6 @@
 //結果画面用
 let coin = 0;
-//数値にする
-score = Number(localStorage.getItem("score"));
+let score = Number(localStorage.getItem("score"));
 
 document.getElementById("comment1").textContent= "あなたのスコアは 10問中" + score + "問正解です。" 
 
