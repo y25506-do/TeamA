@@ -38,8 +38,3 @@ if(!localStorage.getItem("resultset")){
 
 document.getElementById("totalcoin").textContent = "獲得コイン： " + totalCoin;
 
-function resetcoin()
-{
-    localStorage.setItem("totalcoin", 0);
-    location.reload();
-}
