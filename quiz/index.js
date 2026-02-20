@@ -1,7 +1,9 @@
-//index.htmlの時だけコインを０にする
-if (performance.navigation.type === 1) {
-    localStorage.clear();
-}
+// リロードの時だけコインを０にする
+// if (performance.navigation.type === 1) {
+//     localStorage.clear();
+// }
+  // ↑↑↑の機能っている？
+
 // totalcoin がまだ存在しないときだけ 0 にする
 if (localStorage.getItem("totalcoin") === null) {
     localStorage.setItem("totalcoin", 0);
