@@ -2,6 +2,7 @@ let allquiz = [];
 let quiz = [];
 let count = 0;
 let score = 0;
+let coin = 0;
 let timer;
 let timeLeft = 20;
 
@@ -22,6 +23,8 @@ fetch('quiz.json')
     });
 
 function game() {
+    //スタートした時だけ加算されるようにする
+    localStorage.removeItem("coinadded");
     // データが空でないか確認
     if(allquiz.length === 0) return;
     
@@ -137,34 +140,4 @@ function finishgame(){
     clearInterval(timer);
     localStorage.setItem("score",score);
     window.location.href="result.html";
-}
-//結果画面用
-score = Number(localStorage.getItem("score"));
-
-document.getElementById("comment1").textContent= "あなたのスコアは 10問中" + score + "問正解です。" 
-
-let coin = 0;
-if(score >= 0 && score <= 3)
-{
-    coin = coin + 1;
-    document.getElementById("coin").textContent = "獲得コイン： " + coin;
-    document.getElementById("comment2").textContent = "分からない問題多かったでしょう。中には関心を持つ問題や問題を考えた人の特徴が見えたと思います。少しずつスコアをあげましょう。";
-}
-else if(score >= 4 && score <= 6)
-{
-    coin = coin + 2;
-    document.getElementById("coin").textContent = "獲得コイン： " + coin;
-    document.getElementById("comment2").textContent = "ある程度問題解けたかな？問題を解いているとその人がどんな気持ちで考えたのか分かっていくはずです。君なら満点目指せるよ。";
-}
-else if(score >= 7 && score <= 9)
-{   
-    coin = coin + 3;
-    document.getElementById("coin").textContent = "獲得コイン： " + coin;
-    document.getElementById("comment2").textContent = "ほぼほぼ問題解けるようになったね。この調子で満点を取れたらいいですね。頑張りましょう。";
-}
-else
-{
-    coin = coin + 3;
-    document.getElementById("coin").textContent = "獲得コイン： " + coin;
-    document.getElementById("comment2").textContent = "満点取れましたね！しかし、問題は合計４０問あります。全部解けるように今後も頑張りましょう。";
 }
