@@ -123,6 +123,38 @@ font-family: "x8y12pxTheStrongGamer", monospace; /* ← 追加 */
   opacity: 10;
 }
 
+/*確認用*/
+.home-btn{
+  width: 130px;
+  height: 80px;
+
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'PixelMplus12-Regular', Courier, monospace;
+  color: black; /*黒でも大丈夫?*/
+
+  border: none; /*枠消す*/
+  background: none; /*デフォルト色を消す*/
+
+  /*背景追加*/
+  background-image: url("./img/button.png");
+  background-size: contain; 
+  background-position: center; /*中央に*/
+  background-repeat: no-repeat; /*繰り返さない*/
+
+  transition: transform 0.1s; /*押した感じ*/
+}
+
+/*ホバー*/
+.home-btn:hover{
+transform: scale(1.05);
+}
+
+/*クリック*/
+.home-btn:active{
+transform: scale(0.95);
+}
+
 
   
 /*画面全体中央配置*/
