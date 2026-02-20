@@ -10,3 +10,10 @@ if (localStorage.getItem("totalcoin") === null) {
 let totalcoin = Number(localStorage.getItem("totalcoin"));
 document.getElementById("totalcoin").textContent =
     "獲得コイン： " + totalcoin;
+
+// totalcoinのデータ削除
+function resetcoin()
+{
+    localStorage.removeItem("totalcoin");
+    location.reload();
+}
