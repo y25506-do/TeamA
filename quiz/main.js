@@ -140,4 +140,3 @@ function finishgame(){
     }, 100);
 }
 
-
