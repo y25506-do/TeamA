@@ -1,7 +1,12 @@
-// 初回アクセスならコインをリセット
-if (!localStorage.getItem("firstvisit")) {
-    localStorage.setItem("totalcoin", 0);
-    localStorage.setItem("firstvisit", "true");
+//index.htmlの時だけコインを０にする
+if (performance.navigation.type === 1) {
+    localStorage.clear();
 }
-let totalCoin = Number(localStorage.getItem("totalcoin")) || 0;
-document.getElementById("totalcoin").textContent = "獲得コイン： " + totalCoin;
+// totalcoin がまだ存在しないときだけ 0 にする
+if (localStorage.getItem("totalcoin") === null) {
+    localStorage.setItem("totalcoin", 0);
+}
+
+let totalcoin = Number(localStorage.getItem("totalcoin"));
+document.getElementById("totalcoin").textContent =
+    "獲得コイン： " + totalcoin;

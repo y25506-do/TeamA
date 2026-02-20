@@ -22,8 +22,7 @@ fetch('quiz.json')
     });
 
 function game() {
-    //スタートした時だけ加算されるようにする
-    localStorage.removeItem("coinadded");
+    localStorage.removeItem("resultset");
     // データが空でないか確認
     if(allquiz.length === 0) return;
     
@@ -138,9 +137,6 @@ function resetTimer() {
 function finishgame(){
     clearInterval(timer);
     localStorage.setItem("score",score);
-    let totalcoin = Number(localStorage.getItem("totalcoin")) || 0;
-    totalcoin = totalcoin + score;
-    localStorage.setItem("totalcoin", totalcoin);
     window.location.href="result.html";
 }
 
