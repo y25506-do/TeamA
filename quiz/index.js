@@ -1,21 +1,15 @@
-// リロードの時だけコインを０にする
-// if (performance.navigation.type === 1) {
-//     localStorage.clear();
-// }
-  // ↑↑↑の機能っている？
+// index.js
 
-// totalcoin がまだ存在しないときだけ 0 にする
-if (localStorage.getItem("totalcoin") === null) {
-    localStorage.setItem("totalcoin", 0);
+document.addEventListener("DOMContentLoaded", () => {
+  // コイン表示は common.js が更新するので追加不要（念のため）
+  window.__APP__.updateCoinUI();
+});
+
+// 「データ削除」ボタン用（index.htmlで onclick="resetcoin()" してる）
+function resetcoin() {
+  window.__APP__.resetAllData();
+  location.reload();
 }
 
-let totalcoin = Number(localStorage.getItem("totalcoin"));
-document.getElementById("totalcoin").textContent =
-    "獲得コイン： " + totalcoin;
-
-// totalcoinのデータ削除
-function resetcoin()
-{
-    localStorage.removeItem("totalcoin");
-    location.reload();
-}
+// グローバルに見えるように
+window.resetcoin = resetcoin;
