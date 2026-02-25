@@ -11,90 +11,80 @@
     },
     "3":
     {
-        "gazou": "zukan.img/",
+        "gazou": "zukan.img/スプラトゥーン３.png",
         "name": "スプラトゥーン３"
     },
     "4":
     {
-        "gazou": "zukan.img/",
+        "gazou": "zukan.img/マリオカート8デラックス.png",
         "name": "マリオカート８ デラックス"
     },
     "5":
     {
-        "gazou": "zukan.img/",
-        "name": "HAC-001（-01）"
-    },
-    "6":
-    {
         "gazou": "zukan.img/粉骨砕身.png",
         "name": "粉骨砕身"
     },
-    "7":
+    "6":
     {
-        "gazou": "zukan.img/",
+        "gazou": "zukan.img/役不足.png",
         "name": "役不足"
     },
-    "8":
+    "7":
     {
         "gazou": "zukan.img/五里霧中.png",
         "name": "五里霧中"
     },
-    "9":
+    "8":
     {
-        "gazou": "zukan.img/",
+        "gazou": "zukan.img/臥薪嘗胆.png",
         "name": "臥薪嘗胆"
     },
-    "10":
+    "9":
     {
         "gazou": "zukan.img/他山の石.png",
         "name": "他山の石"
     },
-    "11":
+    "10":
     {
-        "gazou": "zukan.img/",
+        "gazou": "zukan.img/メガネ.png",
         "name": "メガネ"
     },
-    "12":
+    "11":
     {
         "gazou": "zukan.img/肉球.png",
         "name": "肉球"
     },
-    "13":
+    "12":
     {
         "gazou": "zukan.img/タルトタタン.png",
         "name": "タルトタタン"
     },
-    "14":
-    {
-        "gazou": "zukan.img/",
-        "name": "スンスン"
-    },
-    "15":
+    "13":
     {
         "gazou": "zukan.img/ブロッコリー.png",
         "name": "ブロッコリー"
     },
-    "16":
+    "14":
     {
-        "gazou": "zukan.img/",
+        "gazou": "zukan.img/コウモリ.png",
         "name": "コウモリ"
     },
-    "17":
+    "15":
     {
         "gazou": "zukan.img/ペンギン.png",
         "name": "ペンギン"
     },
-    "18":
+    "16":
     {
         "gazou": "zukan.img/ライオン.png",
         "name": "ライオン"
     },
-    "19":
+    "17":
     {
-        "gazou": "zukan.img/",
+        "gazou": "zukan.img/パンダ.png",
         "name": "パンダ"
     },
-    "20":
+    "18":
     {
         "gazou": "zukan.img/イルカ.png",
         "name": "イルカ"

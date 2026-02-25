@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("img/mario.png");
+    background-image: url("img/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
             background-attachment: fixed;
@@ -34,11 +34,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("img/mario.png");
+    background-image: url("img/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
             background-attachment: fixed;
   }
+
 
 /* タイマー全体 */
 #timer-container {
@@ -275,6 +276,32 @@ transform: scale(1.05);
 /*クリック*/
 .zukan-btn:active{
 transform: scale(0.95);
+}
+
+.delete-btn{
+  width: 220px;
+  height: 80px;
+
+  font-size: 25px;
+  cursor: pointer;
+  font-family: 'x10y12pxDonguriDuel', Courier, monospace;
+  color: black; /*黒でも大丈夫?*/
+
+  border: none; /*枠消す*/
+  background: none; /*デフォルト色を消す*/
+
+  /*背景追加*/
+  background-image: url("./img/button.png");
+  background-size: contain; 
+  background-position: center; /*中央に*/
+  background-repeat: no-repeat; /*繰り返さない*/
+
+  transition: transform 0.1s; /*押した感じ*/
+}
+
+/*ホバー*/
+.zukan-btn:hover{
+transform: scale(1.05);
 }
 
 #button1 {
