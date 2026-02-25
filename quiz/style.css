@@ -380,6 +380,20 @@ transform: scale(0.95);
   padding: 40px;
 }
 
+/* finish表示*/
+#finish {
+  position: relative;
+  top: 40px;
+  left: 80%;
+  transform: translateX(-50%);
+  
+  font-size: 60px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 3px 3px 0px black;
+  letter-spacing: 5px;
+}
+
 #comment1 {
   flex: 1;                     
   display: flex;
