@@ -1,102 +1,102 @@
 {
     "1":
     {
-        "gazou": "zukan.img/gazou1.png",
-        "name": "Ｎｉｎｔｅｎｄｏ Ｓｗｉｔｃｈ"
+        "gazou": "zukan.img/Nintendo switch.png",
+        "name": "Nintendo Switch"
     },
     "2":
     {
-        "gazou": "",
-        "name": "Ｎｉｎｔｅｎｄｏ Ｓｗｉｔｃｈ 有機ＥＬ"
+        "gazou": "zukan.img/Nintendo switch有機EL.png",
+        "name": "Nintendo Switch 有機ＥＬ"
     },
     "3":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "スプラトゥーン３"
     },
     "4":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "マリオカート８ デラックス"
     },
     "5":
     {
-        "gazou": "",
-        "name": "ＨＡＣ－００１（ー０１）"
+        "gazou": "zukan.img/",
+        "name": "HAC-001（-01）"
     },
     "6":
     {
-        "gazou": "",
+        "gazou": "zukan.img/粉骨砕身.png",
         "name": "粉骨砕身"
     },
     "7":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "役不足"
     },
     "8":
     {
-        "gazou": "",
+        "gazou": "zukan.img/五里霧中.png",
         "name": "五里霧中"
     },
     "9":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "臥薪嘗胆"
     },
     "10":
     {
-        "gazou": "",
+        "gazou": "zukan.img/他山の石.png",
         "name": "他山の石"
     },
     "11":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "メガネ"
     },
     "12":
     {
-        "gazou": "",
+        "gazou": "zukan.img/肉球.png",
         "name": "肉球"
     },
     "13":
     {
-        "gazou": "",
+        "gazou": "zukan.img/タルトタタン.png",
         "name": "タルトタタン"
     },
     "14":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "スンスン"
     },
     "15":
     {
-        "gazou": "",
+        "gazou": "zukan.img/ブロッコリー.png",
         "name": "ブロッコリー"
     },
     "16":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "コウモリ"
     },
     "17":
     {
-        "gazou": "",
+        "gazou": "zukan.img/ペンギン.png",
         "name": "ペンギン"
     },
     "18":
     {
-        "gazou": "",
+        "gazou": "zukan.img/ライオン.png",
         "name": "ライオン"
     },
     "19":
     {
-        "gazou": "",
+        "gazou": "zukan.img/",
         "name": "パンダ"
     },
     "20":
     {
-        "gazou": "",
+        "gazou": "zukan.img/イルカ.png",
         "name": "イルカ"
     }
 }
