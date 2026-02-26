@@ -20,8 +20,8 @@ function renderDex() {
   }
 
   // コンプリート率：獲得種類 / 全種類（このアプリのプール数）
-  // ※ガチャの全種類数は固定（6種類）として計算
-  const TOTAL_TYPES = 6;
+  // ※ガチャの全種類数は固定（18種類）として計算
+  const TOTAL_TYPES = 18;
   const gotTypes = entries.length;
   if (collect) collect.textContent = `コンプリート率 ${gotTypes}/${TOTAL_TYPES}`;
 
