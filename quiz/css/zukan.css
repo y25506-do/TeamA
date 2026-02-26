@@ -1,0 +1,36 @@
+/* ===========================
+   zukan.css - 図鑑ページ
+   =========================== */
+
+.zukan-page {
+    flex-direction: column;
+    background-image: url("img/bg.png");
+    background-attachment: fixed;
+}
+
+/* 図鑑タイトル（左上固定） */
+#zukanH2 {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* コンプリート率（上部中央固定） */
+#collect {
+    position: fixed;
+    top: 20px;
+}
+
+/* 図鑑カード */
+#encyclopedia {
+    width: 70%;
+    height: 55%;
+    border-radius: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}

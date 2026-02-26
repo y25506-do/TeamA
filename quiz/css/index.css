@@ -1,0 +1,46 @@
+/* ===========================
+   index.css - トップページ
+   =========================== */
+
+/* コンテナ（タイトル＋ボタン群） */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'x10y12pxDonguriDuel', Courier, monospace;
+}
+
+/* ボタン共通スタイル（スタート・ガチャ・ずかん・削除） */
+.start-btn,
+.gacha-btn,
+.zukan-btn,
+.delete-btn {
+    width: 220px;
+    height: 80px;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: 'x10y12pxDonguriDuel', Courier, monospace;
+    color: black;
+    border: none;
+    background: none;
+    background-image: url("./img/button.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.1s;
+}
+
+.start-btn:hover,
+.gacha-btn:hover,
+.zukan-btn:hover,
+.delete-btn:hover {
+    transform: scale(1.05);
+}
+
+.start-btn:active,
+.gacha-btn:active,
+.zukan-btn:active,
+.delete-btn:active {
+    transform: scale(0.95);
+}

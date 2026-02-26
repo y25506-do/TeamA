@@ -1,0 +1,84 @@
+/* ===========================
+   common.css - 全ページ共通
+   =========================== */
+
+/* フォント定義 */
+@font-face {
+    font-family: "x10y12pxDonguriDuel";
+    src: url("./fonts/x10y12pxDonguriDuel.ttf");
+}
+
+@font-face {
+    font-family: "PixelMplus12-Regular";
+    src: url("./fonts/PixelMplus12-Regular.ttf");
+}
+
+@font-face {
+    font-family: "x8y12pxTheStrongGamer";
+    src: url("./fonts/x8y12pxTheStrongGamer.ttf");
+}
+
+/* ページ共通レイアウト */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: url("./img/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* コイン表示（右上固定） */
+.coins {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+}
+
+.coins img {
+    width: 40px;
+    height: auto;
+}
+
+#totalcoin {
+    font-size: 150%;
+    color: white;
+    margin: 0;
+    background-color: #505050;
+}
+
+/* ホームボタン（右下固定） */
+.home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 130px;
+    height: 80px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'PixelMplus12-Regular', Courier, monospace;
+    color: black;
+    border: none;
+    background: none;
+    background-image: url("./img/button.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.1s;
+}
+
+.home-btn:hover {
+    transform: scale(1.05);
+}
+
+.home-btn:active {
+    transform: scale(0.95);
+}
