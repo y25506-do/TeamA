@@ -5,17 +5,17 @@
 /* フォント定義 */
 @font-face {
     font-family: "x10y12pxDonguriDuel";
-    src: url("./fonts/x10y12pxDonguriDuel.ttf");
+    src: url("../fonts/x10y12pxDonguriDuel.ttf");
 }
 
 @font-face {
     font-family: "PixelMplus12-Regular";
-    src: url("./fonts/PixelMplus12-Regular.ttf");
+    src: url("../fonts/PixelMplus12-Regular.ttf");
 }
 
 @font-face {
     font-family: "x8y12pxTheStrongGamer";
-    src: url("./fonts/x8y12pxTheStrongGamer.ttf");
+    src: url("../fonts/x8y12pxTheStrongGamer.ttf");
 }
 
 /* ページ共通レイアウト */
@@ -26,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    background-image: url("./img/bg.png");
+    background-image: url("../img/bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -68,7 +68,7 @@ body {
     color: black;
     border: none;
     background: none;
-    background-image: url("./img/button.png");
+    background-image: url("../img/button.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
