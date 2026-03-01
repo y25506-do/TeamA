@@ -22,7 +22,7 @@
 #collect {
     position: fixed;
     top: 20px;
-}
+}  
 
 /* 図鑑カード（全体） */
 #encyclopedia {
@@ -32,6 +32,7 @@
   background-color: #ffffff;
   padding: 40px;
   box-sizing: border-box;
+
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* 6列×3行で18枠 */
   gap: 12px;
