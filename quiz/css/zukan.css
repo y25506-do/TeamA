@@ -22,15 +22,73 @@
 #collect {
     position: fixed;
     top: 20px;
+}  
+
+/* 図鑑カード（全体） */
+#encyclopedia {
+  width: 70%;
+  height: 55%;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 40px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6列×3行で18枠 */
+  gap: 12px;
+  overflow-y: auto;
 }
 
-/* 図鑑カード */
-#encyclopedia {
-    width: 70%;
-    height: 55%;
-    border-radius: 20px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
+/* 1枠 */
+.zukan-slot {
+  background: #f7f7f7;
+  border-radius: 14px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+/* No表示 */
+.slot-no {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+/* 画像 */
+.slot-img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+/* 名前 */
+.slot-name {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 6px;
+  word-break: break-word;
+}
+
+/* 個数 */
+.slot-count {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+/* 未取得（locked） */
+.zukan-slot.locked .slot-img {
+  display: none; /* 未取得は画像を隠す */
+}
+.zukan-slot.locked .slot-name {
+  opacity: 0.5;
 }

@@ -20,11 +20,19 @@
     <button id="gacha-btn2">ガチャを回す</button>
   
     <!-- 結果表示エリア -->
-    <div id="resultBox">
-      <div id="itemDisplay">
-       
-      </div>
+  <div id="resultBox">
+    <div id="itemDisplay">
+      <p class="result-title">獲得アイテム</p>
+
+      <img id="resultImg" class="result-img" src="" alt="" />
+
+      <p id="resultName" class="result-name">（ここに名前）</p>
+
+      <p id="resultError" class="result-error" hidden>
+        ※画像が見つかりません
+      </p>
     </div>
+  </div>
 
     <button class="home-btn" onclick="location.href='index.html'">
         ホームに戻る

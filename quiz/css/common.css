@@ -41,6 +41,12 @@ body {
     align-items: center;
     gap: 8px;
     z-index: 1000;
+   /* ピクセル風のパネル風に */
+    background: #2a2a2a;
+    border: 3px solid #555;
+    box-shadow: 3px 3px 0px #000, inset 0 0 0 2px #444;
+    padding: 6px 14px 6px 8px;
+    image-rendering: pixelated;
 }
 
 .coins img {
