@@ -1,42 +1,89 @@
-// zukan.js
-document.addEventListener("DOMContentLoaded", () => {
-  window.__APP__.updateCoinUI();
-  renderDex();
-});
+(() => {
+  const JSON_PATH = "item.json"; // あなたの構成だとこれでOK
+  const TOTAL_SLOTS = 18;
 
-function renderDex() {
-  const dex = window.__APP__.loadDex();
-  const entries = Object.entries(dex);
-
-  const collect = document.getElementById("collect");
-  const container = document.getElementById("encyclopedia");
-
-  if (!container) return;
-
-  if (entries.length === 0) {
-    if (collect) collect.textContent = "コンプリート率 0/0";
-    container.innerHTML = `<p>まだ図鑑が空です。ガチャを回してみてください。</p>`;
+  const APP = window.__APP__;
+  if (!APP) {
+    console.error("common.js が先に読み込まれていません（__APP__ が見つかりません）");
     return;
   }
 
-  // コンプリート率：獲得種類 / 全種類（このアプリのプール数）
-  // ※ガチャの全種類数は固定（18種類）として計算
-  const TOTAL_TYPES = 18;
-  const gotTypes = entries.length;
-  if (collect) collect.textContent = `コンプリート率 ${gotTypes}/${TOTAL_TYPES}`;
+  const collectEl = document.getElementById("collect");
+  const slots = Array.from(document.querySelectorAll(".zukan-slot"));
 
-  // レア度順
-  const rarityOrder = { SSR: 4, SR: 3, R: 2, N: 1 };
-  entries.sort((a, b) => (rarityOrder[b[1].rarity] || 0) - (rarityOrder[a[1].rarity] || 0));
+  async function loadAllItems() {
+    const res = await fetch(JSON_PATH, { cache: "no-store" });
+    if (!res.ok) throw new Error(`item.json 読み込み失敗: ${res.status}`);
+    const data = await res.json();
 
-  container.innerHTML = "";
-  for (const [id, info] of entries) {
-    const div = document.createElement("div");
-    div.className = "dex-item"; // style.cssに無ければ普通のdivでもOK
-    div.innerHTML = `
-      <p><strong>${info.name}</strong>（${info.rarity}）</p>
-      <p>所持数：${info.count}</p>
-    `;
-    container.appendChild(div);
+    // {"1": {...}, ...} -> Map(id -> item)
+    const map = new Map();
+    for (const [id, v] of Object.entries(data)) {
+      map.set(String(id), { id: String(id), ...v });
+    }
+    return map;
   }
-}
+
+  function fillSlot(slot, item, ownedInfo) {
+    const img = slot.querySelector(".slot-img");
+    const nameEl = slot.querySelector(".slot-name");
+    const countEl = slot.querySelector(".slot-count");
+
+    if (item && ownedInfo) {
+      slot.classList.remove("locked");
+
+      img.style.display = "block";
+      img.src = encodeURI(item.gazou);
+      img.alt = item.name;
+
+      nameEl.textContent = item.name;
+      countEl.textContent = `×${ownedInfo.count ?? 1}`;
+
+      img.onerror = () => {
+        // 画像が見つからない場合でも名前は出す
+        img.style.display = "none";
+        countEl.textContent = `×${ownedInfo.count ?? 1}（画像なし）`;
+      };
+    } else {
+      slot.classList.add("locked");
+
+      img.removeAttribute("src");
+      img.alt = "";
+      img.style.display = "none";
+
+      nameEl.textContent = "？？？";
+      countEl.textContent = "";
+    }
+  }
+
+  async function main() {
+    try {
+      const allMap = await loadAllItems(); // id -> item
+      const dex = APP.loadDex();           // id -> {name, rarity, count}
+
+      let ownedCount = 0;
+
+      // HTMLの18枠を順番に埋める
+      for (const slot of slots) {
+        const id = String(slot.dataset.id || "");
+        const item = allMap.get(id);
+        const ownedInfo = dex[id];
+
+        if (ownedInfo) ownedCount++;
+        fillSlot(slot, item, ownedInfo);
+      }
+
+      // 枠が18個無かったとき用（保険）
+      if (slots.length !== TOTAL_SLOTS) {
+        console.warn(`枠数が ${slots.length} 個です（想定は ${TOTAL_SLOTS} 個）`);
+      }
+
+      collectEl.textContent = `コンプリート率${ownedCount}/${TOTAL_SLOTS}`;
+    } catch (e) {
+      console.error(e);
+      collectEl.textContent = "コンプリート率0/18";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", main);
+})();
