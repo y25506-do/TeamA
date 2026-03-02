@@ -9,23 +9,28 @@
 </head>
 <body class="result-page">
 
-    <audio src="bgm/result.mp3" autoplay loop></audio> <!-- 曲 -->
+    <!-- 曲 -->
+    <audio src="bgm/result.mp3" autoplay loop></audio> 
 
+    <!-- 獲得コイン数 -->
     <div class="coins">
         <img src="img/coin.png" alt="">
         <p id="totalcoin">獲得コイン：０</p>
     </div>
 
+    <!-- 結果表示エリア -->
     <div id="result">
         <h1 id="finish">Finish!!</h1>
         <p id="comment1">あなたのスコアは○問正解です</p>
         <p id="comment2">おめでとう</p>
     </div>
 
+    <!-- ホームボタン -->
     <button class="home-btn" onclick="location.href='index.html'">
         ホームに戻る
     </button>
 
+    <!-- js -->
     <script src="common.js"></script>
     <script src="result.js"></script>
 </body>

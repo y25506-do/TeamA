@@ -10,9 +10,11 @@
 </head>
 
 <body>
+    
+    <!-- 曲 -->
+    <audio src="bgm/index.mp3" autoplay loop></audio> 
 
-    <audio src="bgm/index.mp3" autoplay loop></audio> <!-- 曲 -->
-
+    <!-- 獲得コイン数 -->
     <div class="coins">
         <img src="img/coin.png" alt="">
         <p id="totalcoin">獲得コイン：０</p>
@@ -22,21 +24,27 @@
     <h1>ゴチャマゼクイズ</h1>
     <p>１回１０問</p>
     
+    
+    <!-- スタートボタン -->
     <button class="start-btn" onclick="location.href='quiz.html'">
         スタート
     </button>
+    <!-- ガチャボタン -->
     <button class="gacha-btn" onclick="location.href='gacha.html'">
         ガチャ
     </button>
+    <!-- 図鑑ボタン -->
     <button class="zukan-btn" onclick="location.href='zukan.html'">
         ずかん
     </button>
+    <!-- データ削除ボタン -->
     <button class="delete-btn" onclick="resetcoin()">
       データ削除
     </button>
     
     </div>
 
+    <!-- js -->
     <script src="common.js"></script>
     <script src="index.js"></script>
 </body>

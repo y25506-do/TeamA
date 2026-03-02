@@ -8,9 +8,10 @@
     background-attachment: fixed;
 }
 
+/* １回１０コイン表示 */
 #setumei {
   position: fixed;
-  bottom: 130px;   /* ← ボタンより上に配置（数値で微調整OK） */
+  bottom: 130px;   
   left: 50%;
   transform: translateX(-50%);
 

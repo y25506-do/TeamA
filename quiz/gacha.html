@@ -8,9 +8,11 @@
     <title>gacha</title>
 </head>
 <body class="gacha-page">
-    
-    <audio src="bgm/gacha.mp3" autoplay loop></audio> <!-- 曲 -->
 
+    <!-- 曲 -->
+    <audio src="bgm/gacha.mp3" autoplay loop></audio> 
+
+    <!-- 獲得コイン数 -->
     <div class="coins">
         <img src="img/coin.png" alt="">
         <p id="totalcoin">獲得コイン：０</p>
@@ -21,7 +23,6 @@
     <!-- ガチャボタン -->
     <button id="gacha-btn2">ガチャを回す</button>
   
-
     <!-- 結果表示エリア -->
   <div id="resultBox">
     <div id="itemDisplay">
@@ -37,10 +38,12 @@
     </div>
   </div>
 
+    <!-- ホームボタン -->
     <button class="home-btn" onclick="location.href='index.html'">
         ホームに戻る
     </button>
-  
+
+    <!-- js -->
     <script src="common.js"></script>
     <script src="gacha.js"></script>
 </body>
