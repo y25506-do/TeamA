@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,12 @@
 <body class="zukan-page">
 
     <!-- 曲 -->
-    <audio src="bgm/zukan.mp3" autoplay loop></audio>
+    <audio id="bgm" src="bgm/zukan.mp3" autoplay loop></audio> 
+
+    <!--BGMミュートボタン追加-->
+    <button class="mute-btn" id="muteBtn" type="button" aria-label="BGMのミュート切り替え" title="BGM ON/OFF">
+        ♪
+    </button>
 
     <!-- 獲得コイン数 -->
     <div class="coins">
@@ -21,133 +26,133 @@
     <h2 id="zukanH2">図鑑</h2>
 
     <!-- コンプリート率 -->
-    <p id="collect">コンプリート率０/０</p>
+    <p id="collect">コンプリート率0/0</p>
 
     <div id="encyclopedia">
     <!-- 18枠（未取得は初期状態で？？？表示） -->
     <div class="zukan-slot locked" data-id="1">
       <div class="slot-no">No.1</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="2">
       <div class="slot-no">No.2</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="3">
       <div class="slot-no">No.3</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="4">
       <div class="slot-no">No.4</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="5">
       <div class="slot-no">No.5</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="6">
       <div class="slot-no">No.6</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="7">
       <div class="slot-no">No.7</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="8">
       <div class="slot-no">No.8</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="9">
       <div class="slot-no">No.9</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="10">
       <div class="slot-no">No.10</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
      <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="11">
       <div class="slot-no">No.11</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="12">
       <div class="slot-no">No.12</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="13">
       <div class="slot-no">No.13</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="14">
       <div class="slot-no">No.14</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="15">
       <div class="slot-no">No.15</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="16">
       <div class="slot-no">No.16</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
 
     <div class="zukan-slot locked" data-id="17">
       <div class="slot-no">No.17</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
   
     <div class="zukan-slot locked" data-id="18">
       <div class="slot-no">No.18</div>
       <img class="slot-img" alt="">
-      <div class="slot-name">？？？</div>
+      <div class="slot-name">???</div>
       <div class="slot-count"></div>
     </div>
   </div>

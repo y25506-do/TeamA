@@ -112,3 +112,32 @@ window.__APP__ = {
   loadJSON,
   saveJSON
 };
+
+// ===========================
+// BGM ミュート管理
+// ===========================
+function initMuteBtn() {
+  const bgm     = document.getElementById('bgm');
+  const muteBtn = document.getElementById('muteBtn');
+  if (!bgm || !muteBtn) return;
+
+  let isMuted = localStorage.getItem('bgmMuted') === 'true';
+
+  bgm.muted = isMuted;
+  muteBtn.textContent = isMuted ? '×' : '♪';
+
+  bgm.play().catch(() => {});
+
+  muteBtn.addEventListener('click', () => {
+      isMuted = !isMuted;
+      localStorage.setItem('bgmMuted', isMuted);
+      bgm.muted = isMuted;
+      muteBtn.textContent = isMuted ? '×' : '♪';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+initCoinIfNeeded();
+updateCoinUI();
+initMuteBtn(); // ← ここに追加
+});

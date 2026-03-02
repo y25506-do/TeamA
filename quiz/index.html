@@ -11,13 +11,18 @@
 <body>
     
     <!-- 曲 -->
-    <audio src="bgm/index.mp3" autoplay loop></audio> 
+    <audio id="bgm" src="bgm/index.mp3" autoplay loop></audio> 
 
     <!-- 獲得コイン数 -->
     <div class="coins">
         <img src="img/coin.png" alt="">
         <p id="totalcoin">獲得コイン：０</p>
     </div>
+
+    <!--BGMミュートボタン追加-->
+    <button class="mute-btn" id="muteBtn" type="button" aria-label="BGMのミュート切り替え" title="BGM ON/OFF">
+        ♪
+    </button>
 
     <div class="container">
     <h1>ゴチャマゼクイズ</h1>
@@ -37,7 +42,7 @@
         ずかん
     </button>
     <!-- データ削除ボタン -->
-    <button class="delete-btn" onclick="resetcoin()">
+    <button class="delete-btn" onclick="confirmReset()">
       データ削除
     </button>
     
@@ -46,6 +51,26 @@
     <!-- js -->
     <script src="common.js"></script>
     <script src="index.js"></script>
+    <script>
+        // ============================================================
+        // データ削除：確認ダイアログ付き
+        // ============================================================
+        function confirmReset() {
+            if (confirm('本当にデータを削除しますか？\nこの操作は元に戻せません。')) {
+                resetcoin(); // common.js の関数を呼ぶ
+            }
+        }
+
+        // ============================================================
+        // コイン数更新時にアニメーション（common.jsからも呼び出し可）
+        // ============================================================
+        function animateCoin() {
+            const coinsEl = document.querySelector('.coins');
+            coinsEl.classList.remove('bounce');
+            // 一度外してから付け直すことで再生させる
+            void coinsEl.offsetWidth;
+            coinsEl.classList.add('bounce');
+        }
+    </script>
 </body>
 </html>
-

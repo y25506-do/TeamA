@@ -10,7 +10,12 @@
 <body class="result-page">
 
     <!-- 曲 -->
-    <audio src="bgm/result.mp3" autoplay loop></audio> 
+    <audio id="bgm" src="bgm/result.mp3" autoplay loop></audio> 
+
+    <!--BGMミュートボタン追加-->
+    <button class="mute-btn" id="muteBtn" type="button" aria-label="BGMのミュート切り替え" title="BGM ON/OFF">
+        ♪
+    </button>
 
     <!-- 獲得コイン数 -->
     <div class="coins">
