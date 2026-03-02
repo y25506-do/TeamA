@@ -22,6 +22,7 @@
 #collect {
     position: fixed;
     top: 20px;
+    font-size: 150%;
 }  
 
 /* 図鑑カード（全体） */

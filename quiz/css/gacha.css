@@ -8,16 +8,57 @@
     background-attachment: fixed;
 }
 
+#setumei {
+  position: fixed;
+  bottom: 130px;   /* ← ボタンより上に配置（数値で微調整OK） */
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: inline-block;
+  width: max-content;
+
+  background: #2a2a2a;
+  color: white;
+  border: 3px solid #555;
+  box-shadow: 
+      3px 3px 0px #000,
+      inset 0 0 0 2px #444;
+
+  padding: 6px 14px 6px 8px;
+
+  font-family: 'PixelMplus12-Regular', Courier, monospace;
+  image-rendering: pixelated;
+
+  z-index: 1000; /* ボタンと同じ層に */
+}
+
 /* ガチャを回すボタン（下部中央固定） */
 #gacha-btn2 {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  padding: 40px 35px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'PixelMplus12-Regular', Courier, monospace;
+  color: black;
+  border: none;
+  background: none;
+  background-image: url("../img/button.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.1s;
+}
+
+#gacha-btn2:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+#gacha-btn2:active {
+  transform: translateX(-50%) scale(0.95);
 }
 
 /* 結果表示ボックス（最初は透明） */
