@@ -1,7 +1,7 @@
 // result.js
 document.addEventListener("DOMContentLoaded", () => {
   const keys = window.__APP__.STORAGE_KEYS;
-
+  //スコアと要素を取得、スコアを取得できなかった場合0
   const score = Number(localStorage.getItem(keys.score)) || 0;
   const comment1 = document.getElementById("comment1");
   const comment2 = document.getElementById("comment2");
@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // コイン付与：ここでは「score枚」を付与（あなたの現仕様）
   const coin = score;
-
+  // comment2変換
   if (comment2) {
-    if (score >= 0 && score <= 3) {
+    if (score <= 3) {
       comment2.textContent = "分からない問題多かったでしょう。少しずつスコアをあげましょう。";
     } else if (score <= 6) {
       comment2.textContent = "ある程度問題解けたかな？君なら満点目指せるよ。";
@@ -25,7 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 二重加算防止
   if (!localStorage.getItem(keys.resultSet)) {
+    // コインが加算していない時だけ加算
     window.__APP__.addTotalCoin(coin);
+    // 加算済みになったら保存
     localStorage.setItem(keys.resultSet, "true");
   }
 
