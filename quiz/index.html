@@ -58,8 +58,7 @@
         const bgm     = document.getElementById('bgm');
         const muteBtn = document.getElementById('muteBtn');
 
-        // localStorageでミュート状態を保持
-        let isMuted = localStorage.getItem('bgmMuted') === 'true';
+        let isMuted = false;
         applyMute();
 
         muteBtn.addEventListener('click', () => {
