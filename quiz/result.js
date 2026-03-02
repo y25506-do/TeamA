@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (score <= 9) {
       comment2.textContent = "ほぼほぼ問題解けるようになったね。この調子で満点を取れたらいいですね。";
     } else {
-      comment2.textContent = "満点取れましたね！今後も頑張りましょう。";
+      comment2.textContent = "満点取れましたね！問題は全部で40問です！今後も頑張りましょう。";
     }
   }
 
