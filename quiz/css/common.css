@@ -88,3 +88,54 @@ body {
 .home-btn:active {
     transform: scale(0.95);
 }
+
+/*追加*/
+/* フォーカス時のアウトライン（キーボード操作用） */
+.home-btn:focus-visible {
+    outline: 3px solid #FFD700;
+    outline-offset: 4px;
+}
+
+/* BGMミュートボタン（左下固定） */
+.mute-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    border: 3px solid var(--color-border);
+    background: var(--color-bg-panel);
+    box-shadow: var(--shadow-panel);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-btn);
+    image-rendering: pixelated;
+    z-index: 1000;
+}
+
+.mute-btn:hover {
+    transform: scale(1.05);
+}
+
+.mute-btn:active {
+    transform: scale(0.95);
+}
+
+.mute-btn:focus-visible {
+    outline: 3px solid #FFD700;
+    outline-offset: 4px;
+}
+
+/* アニメーション無効化（アクセシビリティ） */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
