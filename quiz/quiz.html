@@ -10,7 +10,12 @@
 <body class="quiz-page">
 
     <!-- 曲 -->
-    <audio src="bgm/quiz.mp3" autoplay loop></audio> 
+    <audio id="bgm" src="bgm/quiz.mp3" autoplay loop></audio> 
+
+    <!--BGMミュートボタン追加-->
+    <button class="mute-btn" id="muteBtn" type="button" aria-label="BGMのミュート切り替え" title="BGM ON/OFF">
+        ♪
+    </button>
 
     <!-- 残り時間 -->
     <div id="timer-container">  
@@ -43,6 +48,27 @@
     <!-- js -->
     <script src="common.js"></script>
     <script src="quiz.js"></script>
+    
+    <script>
+        // ============================================================
+        // BGM ミュート
+        // ============================================================
+        const bgm     = document.getElementById('bgm');
+        const muteBtn = document.getElementById('muteBtn');
 
+        let isMuted = false;
+        applyMute();
+
+        muteBtn.addEventListener('click', () => {
+            isMuted = !isMuted;
+            localStorage.setItem('bgmMuted', isMuted);
+            applyMute();
+        });
+
+        function applyMute() {
+            bgm.muted      = isMuted;
+            muteBtn.textContent = isMuted ? '×' : '♪';
+        }
+    </script>
 </body>
 </html>
