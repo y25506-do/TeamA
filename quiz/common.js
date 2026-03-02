@@ -92,7 +92,7 @@ function addDexItem(item) {
   saveDex(dex);
 }
 
-// 
+// DOMの読み込みが終わった時点でコインの初期化と表示更新
 document.addEventListener("DOMContentLoaded", () => {
   initCoinIfNeeded();
   updateCoinUI();
