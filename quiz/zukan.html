@@ -9,8 +9,10 @@
 </head>
 <body class="zukan-page">
 
-    <audio src="bgm/zukan.mp3" autoplay loop></audio> <!-- 曲 -->
+    <!-- 曲 -->
+    <audio src="bgm/zukan.mp3" autoplay loop></audio>
 
+    <!-- 獲得コイン数 -->
     <div class="coins">
         <img src="img/coin.png" alt="">
         <p id="totalcoin">獲得コイン：０</p>
@@ -18,7 +20,9 @@
 
     <h2 id="zukanH2">図鑑</h2>
 
+    <!-- コンプリート率 -->
     <p id="collect">コンプリート率０/０</p>
+
     <div id="encyclopedia">
     <!-- 18枠（未取得は初期状態で？？？表示） -->
     <div class="zukan-slot locked" data-id="1">
@@ -148,9 +152,12 @@
     </div>
   </div>
 
+    <!-- ホームボタン -->
     <button class="home-btn" onclick="location.href='index.html'">
         ホームに戻る
     </button>
+
+    <!-- js -->
     <script src="common.js"></script>
     <script src="zukan.js"></script>
 </body>
