@@ -53,26 +53,6 @@
     <script src="index.js"></script>
     <script>
         // ============================================================
-        // BGM ミュート
-        // ============================================================
-        const bgm     = document.getElementById('bgm');
-        const muteBtn = document.getElementById('muteBtn');
-
-        let isMuted = false;
-        applyMute();
-
-        muteBtn.addEventListener('click', () => {
-            isMuted = !isMuted;
-            localStorage.setItem('bgmMuted', isMuted);
-            applyMute();
-        });
-
-        function applyMute() {
-            bgm.muted      = isMuted;
-            muteBtn.textContent = isMuted ? '×' : '♪';
-        }
-
-        // ============================================================
         // データ削除：確認ダイアログ付き
         // ============================================================
         function confirmReset() {
